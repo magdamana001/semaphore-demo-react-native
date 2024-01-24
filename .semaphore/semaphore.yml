@@ -12,7 +12,7 @@ blocks:
     dependencies: []
     task:
       jobs:
-        - name: lscpu
+        - name: 'docker build -t image '
           commands:
             - checkout
             - cache restore
@@ -26,7 +26,7 @@ blocks:
         commands:
           - checkout
       jobs:
-        - name: run eslint
+        - name: 'docker build -t image '
           commands:
             - cache restore
             - npm run lint
