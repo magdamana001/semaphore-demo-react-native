@@ -14,10 +14,7 @@ blocks:
       jobs:
         - name: 'docker build -t image '
           commands:
-            - checkout
-            - cache restore
-            - npm install
-            - cache store
+            - 'docker build -t image '
   - name: Run linter
     dependencies:
       - Install dependencies
@@ -26,7 +23,7 @@ blocks:
         commands:
           - checkout
       jobs:
-        - name: 'docker build -t image '
+        - name: run eslint
           commands:
             - cache restore
             - npm run lint
